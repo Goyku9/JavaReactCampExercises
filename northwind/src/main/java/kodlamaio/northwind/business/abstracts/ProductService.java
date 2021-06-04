@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import kodlamaio.northwind.core.utilities.results.DataResult;
 import kodlamaio.northwind.core.utilities.results.Result;
 import kodlamaio.northwind.entities.concretes.Product;
+import kodlamaio.northwind.entities.dtos.ProductWithCagegoryDto;
 
 public interface ProductService {
 	
@@ -28,6 +29,8 @@ public interface ProductService {
 	DataResult<List<Product>> getByProductNameContains(String productName);//ürün ismine göre arama yapacak.
 	
 	DataResult<List<Product>> getByProductNameStartsWith(String productName);
+	
+	DataResult<List<ProductWithCagegoryDto>> getProductWithCategoryDetails();
 	
 
 
